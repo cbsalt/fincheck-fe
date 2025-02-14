@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Passo 1: Checkout do código
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Passo 2: Configurar Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Passo 3: Instalar dependências
+      - name: Install dependencies
+        run: npm install
+
+      # Passo 4: Rodar testes (se houver)
+      # - name: Run tests
+      # run: npm test
+
+      # Passo 5: Build do projeto
+      - name: Build project
+        run: npm run build
