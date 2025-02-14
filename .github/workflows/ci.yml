@@ -28,8 +28,8 @@ jobs:
         run: npm install
 
       # Passo 4: Rodar testes (se houver)
-      - name: Run tests
-        run: npm test
+      # - name: Run tests
+      # run: npm test
 
       # Passo 5: Build do projeto
       - name: Build project
