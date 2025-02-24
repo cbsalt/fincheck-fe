@@ -1,4 +1,4 @@
-import { httpClient } from "../HttpClient";
+import { httpClient } from "../httpClient";
 
 interface MeResponse {
   name: string;
